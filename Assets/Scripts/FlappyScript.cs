@@ -83,7 +83,7 @@ public class FlappyScript : MonoBehaviour
         {
             if (GetComponent<Rigidbody2D>().velocity.y < -1) //when the speed drops, give a boost
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GetComponent<Rigidbody2D>().mass * 5500 * Time.deltaTime)); //lots of play and stop 
-                                                        //and play and stop etc to find this value, feel free to modify
+            //and play and stop etc to find this value, feel free to modify
         }
         else if (GameStateManager.GameState == GameState.Playing || GameStateManager.GameState == GameState.Dead)
         {
@@ -113,9 +113,9 @@ public class FlappyScript : MonoBehaviour
 
 
 
-    /// <summary>
-    /// when the flappy goes up, it'll rotate up to 45 degrees. when it falls, rotation will be -90 degrees min
-    /// </summary>
+    
+    // when the flappy goes up, it'll rotate up to 45 degrees. when it falls, rotation will be -90 degrees min
+    
     private void FixFlappyRotation()
     {
         if (GetComponent<Rigidbody2D>().velocity.y > 0) flappyYAxisTravelState = FlappyYAxisTravelState.GoingUp;

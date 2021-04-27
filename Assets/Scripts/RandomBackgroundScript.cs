@@ -3,6 +3,7 @@ using System.Collections;
 
 public class RandomBackgroundScript : MonoBehaviour {
 
+	public Sprite[] Backgrounds;
 	// Use this for initialization
 	void Start () {
         (GetComponent<Renderer>() as SpriteRenderer).sprite = Backgrounds[Random.Range(0, Backgrounds.Length)];
@@ -13,5 +14,4 @@ public class RandomBackgroundScript : MonoBehaviour {
 	
 	}
 
-    public Sprite[] Backgrounds;
 }

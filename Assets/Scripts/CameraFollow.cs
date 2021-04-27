@@ -3,6 +3,10 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 
+
+	public Transform Player;
+
+
 	// Use this for initialization
 	void Start () {
         cameraZ = transform.position.z;
@@ -16,6 +20,4 @@ public class CameraFollow : MonoBehaviour {
        
 	}
 
-    
-    public Transform Player;
 }

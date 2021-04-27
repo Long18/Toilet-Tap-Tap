@@ -3,6 +3,11 @@ using System.Collections;
 
 public class ScoreManagerScript : MonoBehaviour {
 
+
+    int previousScore = -1;
+    public Sprite[] numberSprites;
+    public SpriteRenderer Units, Tens, Hundreds;
+
     public static int Score { get; set; }
 
 	// Use this for initialization
@@ -39,8 +44,4 @@ public class ScoreManagerScript : MonoBehaviour {
 
 	}
 
-
-    int previousScore = -1;
-    public Sprite[] numberSprites;
-    public SpriteRenderer Units, Tens, Hundreds;
 }
