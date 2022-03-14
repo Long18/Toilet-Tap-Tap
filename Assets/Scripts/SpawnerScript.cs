@@ -4,6 +4,12 @@ using System.Collections;
 public class SpawnerScript : MonoBehaviour
 {
 
+    private GameObject SpawnObject;
+    public GameObject[] SpawnObjects;
+
+    public float timeMin = 0.7f;
+    public float timeMax = 2f;
+
     // Use this for initialization
     void Start()
     {
@@ -22,9 +28,4 @@ public class SpawnerScript : MonoBehaviour
         Invoke("Spawn", Random.Range(timeMin, timeMax));
     }
 
-    private GameObject SpawnObject;
-    public GameObject[] SpawnObjects;
-
-    public float timeMin = 0.7f;
-    public float timeMax = 2f;
 }

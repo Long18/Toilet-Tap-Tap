@@ -8,6 +8,8 @@ TagManager:
   - Pipeblank
   - Flappy
   - Floor
+  - Pannel
+  - pannelBlank
   layers:
   - Default
   - TransparentFX
