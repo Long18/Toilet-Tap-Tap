@@ -8,9 +8,10 @@ public class GUIDeath : MonoBehaviour
     [Header("Raise Event")] [SerializeField]
     private LoadEventChannelSO loadSceneEventChannel;
 
-     [SerializeField] private BoolEventChannel onRestartEventChannel;
+    [SerializeField] private BoolEventChannel onRestartEventChannel;
+    [SerializeField] private BoolEventChannel onWelcomeEventChannel;
 
-    [Header("Other")] [SerializeField] private GameSceneSO mainSceneSO;
+    [Header("Other")] [SerializeField] private GameSceneSO titleSceneSO;
     [SerializeField] private GameObject panel;
 
     private void OnEnable()
@@ -31,6 +32,8 @@ public class GUIDeath : MonoBehaviour
     public void OnRestart()
     {
         GameStateManager.GameState = GameState.Intro;
-        loadSceneEventChannel.RequestLoadScene(mainSceneSO);
+        loadSceneEventChannel.RequestLoadScene(titleSceneSO);
+        onWelcomeEventChannel.RaiseEvent(true);
+        OnActiveGUI(false);
     }
 }

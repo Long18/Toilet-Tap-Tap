@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.Serialization;
 
@@ -10,8 +11,6 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private AudioClip DeathAudioClip;
     [SerializeField] private AudioClip ScoredAudioClip;
 
-    // [Header("GUI")] [SerializeField] private GameObject IntroGUI;
-
     [Header("Physics")] [SerializeField] private float velocityPerJump = 3;
     [SerializeField] private float xSpeed = 1;
 
@@ -20,20 +19,22 @@ public class PlayerScript : MonoBehaviour
     [Header("Raise event")] [SerializeField]
     private BoolEventChannel onRestartEventChannel;
 
-    [SerializeField] private BoolEventChannel onReadyEventChannel;
+    [SerializeField] private BoolEventChannel onWelcomeEventChannel;
 
     private const string ActiveFly = "flypower";
     private Rigidbody2D rb;
 
+    private void OnEnable()
+    {
+        // onRestartEventChannel.RaiseEvent(false);
+        // onWelcomeEventChannel.RaiseEvent(true);
+    }
+
     // Use this for initialization
     void Start()
     {
-        anim = gameObject.GetComponent<Animator>();
         anim.SetFloat(ActiveFly, 0.0f);
         rb = gameObject.GetComponent<Rigidbody2D>();
-
-        onRestartEventChannel.RaiseEvent(false);
-        onReadyEventChannel.RaiseEvent(true);
     }
 
     // Update is called once per frame
@@ -49,7 +50,8 @@ public class PlayerScript : MonoBehaviour
                 BoostOnYAxis();
                 GameStateManager.GameState = GameState.Playing;
                 ScoreManagerScript.Score = 0;
-                onReadyEventChannel.RaiseEvent(false);
+                onWelcomeEventChannel.RaiseEvent(false);
+                Debug.Log("Start Game");
             }
         }
 
@@ -58,6 +60,7 @@ public class PlayerScript : MonoBehaviour
             MoveBirdOnXAxis();
             if (WasTouchedOrClicked())
             {
+                onWelcomeEventChannel.RaiseEvent(false);
                 BoostOnYAxis();
             }
         }
@@ -74,9 +77,6 @@ public class PlayerScript : MonoBehaviour
                     .AddForce(new Vector2(0,
                         GetComponent<Rigidbody2D>().mass * 5500 * Time.deltaTime)); //lots of play and stop 
             //and play and stop etc to find this value, feel free to modify
-        }
-        else if (GameStateManager.GameState == GameState.Playing || GameStateManager.GameState == GameState.Dead)
-        {
         }
     }
 
@@ -134,5 +134,6 @@ public class PlayerScript : MonoBehaviour
         GameStateManager.GameState = GameState.Dead;
         GetComponent<AudioSource>().PlayOneShot(DeathAudioClip);
         anim.SetBool("dead", true);
+        Debug.Log("Player Dies");
     }
 }

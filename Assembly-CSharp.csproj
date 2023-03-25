@@ -66,7 +66,9 @@
      <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUIDeath.cs" />
      <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUIWelcome.cs" />
      <Compile Include="Assets\0_Utilities\Scripts\UI\RotateImage.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUITitleScene.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\WebGLTemplates" />
      <Folder Include="Assets\0_ToiletTapTap\Scenes" />
      <None Include="Assets\AddressableAssetsData\link.xml" />
      <Folder Include="Assets\0_Utilities\Scripts\EditorTools" />
@@ -80,6 +82,7 @@
      <Folder Include="Assets\0_Utilities\Scenes" />
      <Folder Include="Assets\AddressableAssetsData\AssetGroups\Schemas" />
      <Folder Include="Assets\0_Utilities\Prefabs" />
+     <Folder Include="Assets\WebGLTemplates\WilliamTemplate" />
      <Folder Include="Assets\0_Utilities\Scripts\SceneManager" />
      <Folder Include="Assets\0_Utilities\Scripts\Event" />
      <Folder Include="Assets\0_ToiletTapTap\Data" />

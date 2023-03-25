@@ -736,7 +736,7 @@ MonoBehaviour:
   anim: {fileID: 703414530}
   onRestartEventChannel: {fileID: 11400000, guid: 75b3dddbfb4130341a3bdaa82b6a839b,
     type: 2}
-  onReadyEventChannel: {fileID: 11400000, guid: 62f11f8b8a16690489a5f047a10c1b78,
+  onWelcomeEventChannel: {fileID: 11400000, guid: 62f11f8b8a16690489a5f047a10c1b78,
     type: 2}
 --- !u!58 &703414534
 CircleCollider2D:
@@ -1627,7 +1627,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

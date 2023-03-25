@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Scenes
+  m_EditorClassIdentifier: 
+  m_GroupName: Scenes
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b2e59a4e81bfaf54e82504b63e75ae75
+  m_SerializeEntries:
+  - m_GUID: f93203fd3a3aae94dbc80bc685eb9bed
+    m_Address: Manager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: da828e6c3934f0544b3241eef7805c48
+    m_Address: TitleScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 01763389de19dfd439c79151a8e8e12e
+    m_Address: Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: dc1b0ea09f1166c4780acbf739addbdc, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 89db60dc95ed70d409b3d7068b5795e3, type: 2}
+    - {fileID: 11400000, guid: 18a508f0befd8064680ece40dc1faa07, type: 2}

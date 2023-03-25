@@ -16,27 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 71e4edc7af9b0ce4580c0d0febfa55e2
-  m_SerializeEntries:
-  - m_GUID: 01763389de19dfd439c79151a8e8e12e
-    m_Address: Assets/Scenes
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 04849f832129f9647932d39cec78dd03
-    m_Address: Assets/0_Utilities/Data
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: c500b83329b5b1a4db42db1b019b7585
-    m_Address: Assets/0_Utilities/Prefabs
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: da828e6c3934f0544b3241eef7805c48
-    m_Address: Assets/0_Utilities/Scenes/TitleScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: f93203fd3a3aae94dbc80bc685eb9bed
-    m_Address: Assets/0_Utilities/Scenes/Manager
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: dc1b0ea09f1166c4780acbf739addbdc, type: 2}
   m_SchemaSet:
