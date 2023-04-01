@@ -6,7 +6,6 @@
     <type fullname="FloatEventChannel" preserve="all" />
     <type fullname="GameSceneSO" preserve="all" />
     <type fullname="GUIDeath" preserve="all" />
-    <type fullname="GUITitleScene" preserve="all" />
     <type fullname="GUIWelcome" preserve="all" />
     <type fullname="LoadEventChannelSO" preserve="all" />
     <type fullname="MoveScript" preserve="all" />

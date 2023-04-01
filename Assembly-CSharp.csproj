@@ -41,32 +41,32 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\0_Utilities\Scripts\Events\FloatEventChannel.cs" />
+     <Compile Include="Assets\0_Utilities\Scripts\Events\BoolEventChannel.cs" />
      <Compile Include="Assets\0_ToiletTapTap\Scripts\BackgroundMove.cs" />
      <Compile Include="Assets\0_ToiletTapTap\Scripts\PannelDestroyerScript.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUIWelcome.cs" />
      <Compile Include="Assets\0_ToiletTapTap\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\0_ToiletTapTap\Scripts\MoveScript.cs" />
-     <Compile Include="Assets\0_ToiletTapTap\Scripts\GameState.cs" />
-     <Compile Include="Assets\0_ToiletTapTap\Scripts\ScoreManagerScript.cs" />
-     <Compile Include="Assets\0_ToiletTapTap\Scripts\RandomBackgroundScript.cs" />
-     <Compile Include="Assets\0_ToiletTapTap\Scripts\SpawnerScript.cs" />
-     <Compile Include="Assets\0_ToiletTapTap\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\Events\FloatEventChannel.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\Events\VoidEventChannel.cs" />
+     <Compile Include="Assets\0_Utilities\Scripts\EditorTools\InitializationLoader.cs" />
      <Compile Include="Assets\0_Utilities\Scripts\Events\LoadEventChannelSO.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\Events\BoolEventChannel.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUITitleScene.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\GameState.cs" />
      <Compile Include="Assets\0_Utilities\Scripts\EditorTools\EditorColdStartup.cs" />
      <Compile Include="Assets\0_Utilities\Scripts\Events\GameSceneSO.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\CustomAssetReference.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\SceneManager\SceneLoader.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\Events\IntEventChannel.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\ScoreManagerScript.cs" />
      <Compile Include="Assets\0_Utilities\Scripts\Events\StringEventChannel.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\SceneManager\SceneManagerSO.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\EditorTools\InitializationLoader.cs" />
-     <Compile Include="Assets\0_Utilities\Scripts\UI\GlobalUIManager.cs" />
-     <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUIDeath.cs" />
-     <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUIWelcome.cs" />
      <Compile Include="Assets\0_Utilities\Scripts\UI\RotateImage.cs" />
-     <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUITitleScene.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\RandomBackgroundScript.cs" />
+     <Compile Include="Assets\0_Utilities\Scripts\UI\GlobalUIManager.cs" />
+     <Compile Include="Assets\0_Utilities\Scripts\Events\VoidEventChannel.cs" />
+     <Compile Include="Assets\0_Utilities\Scripts\CustomAssetReference.cs" />
+     <Compile Include="Assets\0_Utilities\Scripts\SceneManager\SceneManagerSO.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\SpawnerScript.cs" />
+     <Compile Include="Assets\0_Utilities\Scripts\SceneManager\SceneLoader.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\UI\GUIDeath.cs" />
+     <Compile Include="Assets\0_Utilities\Scripts\Events\IntEventChannel.cs" />
+     <Compile Include="Assets\0_ToiletTapTap\Scripts\CameraFollow.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\WebGLTemplates" />
      <Folder Include="Assets\0_ToiletTapTap\Scenes" />
@@ -716,20 +716,17 @@
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <Reference Include="UnityEditor.CacheServer">
+     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables">
+     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -739,6 +736,9 @@
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -755,20 +755,20 @@
      <Reference Include="Unity.Services.Core">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Addressables">
-     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Addressables.Editor">
-     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.CacheServer">
-     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ResourceManager">
-     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
      <HintPath>C:\Users\William\Desktop\Projects\Toilet-Tap-Tap\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
