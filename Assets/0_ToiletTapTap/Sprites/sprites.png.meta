@@ -299,7 +299,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -328,7 +328,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 1024
@@ -352,7 +352,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 4096
@@ -364,19 +364,19 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 50
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1987,82 +1987,82 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprites_17: 21300108
-      sprites_46: 21300156
-      sprites_61: 21300040
-      sprites_25: 21300124
-      sprites_37: 21300148
-      sprites_29: 21300132
-      sprites_55: 21300028
-      sprites_54: 21300026
-      sprites_71: 21300060
-      sprites_26: 21300126
-      sprites_19: 21300112
-      sprites_53: 21300024
-      sprites_39: 21300152
-      sprites_44: 21300006
-      sprites_56: 21300030
-      sprites_64: 21300046
+      sprites_0: 21300076
+      sprites_1: 21300078
       sprites_10: 21300096
-      sprites_79: 21300166
-      sprites_57: 21300032
-      sprites_33: 21300140
-      sprites_59: 21300036
-      sprites_60: 21300038
-      sprites_78: 21300074
-      sprites_34: 21300142
-      sprites_9: 21300094
-      sprites_62: 21300042
-      sprites_2: 21300080
-      sprites_30: 21300134
-      sprites_63: 21300044
-      sprites_5: 21300086
-      sprites_67: 21300052
-      sprites_7: 21300090
-      sprites_65: 21300048
-      sprites_68: 21300054
+      sprites_12: 21300098
       sprites_14: 21300102
+      sprites_15: 21300104
+      sprites_16: 21300106
+      sprites_17: 21300108
+      sprites_18: 21300110
+      sprites_19: 21300112
+      sprites_2: 21300080
       sprites_20: 21300114
       sprites_21: 21300116
-      sprites_73: 21300064
-      sprites_23: 21300120
-      sprites_69: 21300164
-      sprites_43: 21300004
-      sprites_12: 21300098
-      sprites_45: 21300008
-      sprites_38: 21300150
-      sprites_1: 21300078
-      sprites_48: 21300160
-      sprites_18: 21300110
-      sprites_36: 21300146
-      sprites_41: 21300000
-      sprites_40: 21300154
-      sprites_75: 21300068
-      sprites_52: 21300022
-      sprites_58: 21300034
-      sprites_77: 21300072
-      sprites_50: 21300018
-      sprites_15: 21300104
-      sprites_42: 21300002
-      sprites_66: 21300050
-      sprites_0: 21300076
-      sprites_16: 21300106
-      sprites_51: 21300020
-      sprites_70: 21300058
-      sprites_72: 21300062
-      sprites_24: 21300122
-      sprites_32: 21300138
-      sprites_49: 21300162
-      sprites_47: 21300158
-      sprites_3: 21300082
-      sprites_4: 21300084
-      sprites_8: 21300092
-      sprites_35: 21300144
-      sprites_6: 21300088
-      sprites_31: 21300136
-      sprites_74: 21300066
       sprites_22: 21300118
+      sprites_23: 21300120
+      sprites_24: 21300122
+      sprites_25: 21300124
+      sprites_26: 21300126
+      sprites_29: 21300132
+      sprites_3: 21300082
+      sprites_30: 21300134
+      sprites_31: 21300136
+      sprites_32: 21300138
+      sprites_33: 21300140
+      sprites_34: 21300142
+      sprites_35: 21300144
+      sprites_36: 21300146
+      sprites_37: 21300148
+      sprites_38: 21300150
+      sprites_39: 21300152
+      sprites_4: 21300084
+      sprites_40: 21300154
+      sprites_41: 21300000
+      sprites_42: 21300002
+      sprites_43: 21300004
+      sprites_44: 21300006
+      sprites_45: 21300008
+      sprites_46: 21300156
+      sprites_47: 21300158
+      sprites_48: 21300160
+      sprites_49: 21300162
+      sprites_5: 21300086
+      sprites_50: 21300018
+      sprites_51: 21300020
+      sprites_52: 21300022
+      sprites_53: 21300024
+      sprites_54: 21300026
+      sprites_55: 21300028
+      sprites_56: 21300030
+      sprites_57: 21300032
+      sprites_58: 21300034
+      sprites_59: 21300036
+      sprites_6: 21300088
+      sprites_60: 21300038
+      sprites_61: 21300040
+      sprites_62: 21300042
+      sprites_63: 21300044
+      sprites_64: 21300046
+      sprites_65: 21300048
+      sprites_66: 21300050
+      sprites_67: 21300052
+      sprites_68: 21300054
+      sprites_69: 21300164
+      sprites_7: 21300090
+      sprites_70: 21300058
+      sprites_71: 21300060
+      sprites_72: 21300062
+      sprites_73: 21300064
+      sprites_74: 21300066
+      sprites_75: 21300068
       sprites_76: 21300070
+      sprites_77: 21300072
+      sprites_78: 21300074
+      sprites_79: 21300166
+      sprites_8: 21300092
+      sprites_9: 21300094
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

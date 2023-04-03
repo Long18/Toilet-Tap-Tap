@@ -11,7 +11,8 @@
     <type fullname="MoveScript" preserve="all" />
     <type fullname="PannelDestroyerScript" preserve="all" />
     <type fullname="PlayerScript" preserve="all" />
-    <type fullname="RotateImage" preserve="all" />
+    <type fullname="RotationScript" preserve="all" />
+    <type fullname="ScaleUI" preserve="all" />
     <type fullname="SceneLoader" preserve="all" />
     <type fullname="SceneManagerSO" preserve="all" />
     <type fullname="ScoreManagerScript" preserve="all" />
@@ -28,6 +29,7 @@
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider" preserve="all" />
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">

@@ -2,22 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GUIWelcome : MonoBehaviour
 {
     [Header("Listen Event")] [SerializeField]
-    private BoolEventChannel onReadyEventChannel;
+    private BoolEventChannel onWelcomeEventChannel;
 
     [Header("Other")] [SerializeField] private GameObject panel;
 
     private void OnEnable()
     {
-        onReadyEventChannel.OnEventRaised += OnActiveGUI;
+        onWelcomeEventChannel.OnEventRaised += OnActiveGUI;
     }
 
     private void OnDisable()
     {
-        onReadyEventChannel.OnEventRaised -= OnActiveGUI;
+        onWelcomeEventChannel.OnEventRaised -= OnActiveGUI;
     }
 
     private void OnActiveGUI(bool active)

@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEngine;
-using System.Collections;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -10,11 +7,13 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField] private AudioClip DeathAudioClip;
     [SerializeField] private AudioClip ScoredAudioClip;
+    [SerializeField] private AudioSource audioSource;
 
     [Header("Physics")] [SerializeField] private float velocityPerJump = 3;
     [SerializeField] private float xSpeed = 1;
 
     [Header("Others")] [SerializeField] private Animator anim;
+    [SerializeField] private Rigidbody2D rig;
 
     [Header("Raise event")] [SerializeField]
     private BoolEventChannel onRestartEventChannel;
@@ -22,25 +21,29 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private BoolEventChannel onWelcomeEventChannel;
 
     private const string ActiveFly = "flypower";
-    private Rigidbody2D rb;
 
     private void OnEnable()
     {
-        // onRestartEventChannel.RaiseEvent(false);
-        // onWelcomeEventChannel.RaiseEvent(true);
+        onRestartEventChannel.RaiseEvent(false);
+        onWelcomeEventChannel.RaiseEvent(true);
+
+        GameObject[] pannels = GameObject.FindGameObjectsWithTag("Pannel");
+        foreach (GameObject pannel in pannels)
+        {
+            Destroy(pannel);
+        }
     }
 
     // Use this for initialization
     void Start()
     {
         anim.SetFloat(ActiveFly, 0.0f);
-        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        anim.SetFloat(ActiveFly, rb.velocity.y);
+        anim.SetFloat(ActiveFly, rig.velocity.y);
 
         if (GameStateManager.GameState == GameState.Intro)
         {
@@ -72,11 +75,11 @@ public class PlayerScript : MonoBehaviour
         //just jump up and down on intro screen
         if (GameStateManager.GameState == GameState.Intro)
         {
-            if (GetComponent<Rigidbody2D>().velocity.y < -1) //when the speed drops, give a boost
-                GetComponent<Rigidbody2D>()
-                    .AddForce(new Vector2(0,
-                        GetComponent<Rigidbody2D>().mass * 5500 * Time.deltaTime)); //lots of play and stop 
-            //and play and stop etc to find this value, feel free to modify
+            if (rig.velocity.y < -1)
+            {
+                var high = rig.mass * 5500 * Time.deltaTime;
+                rig.AddForce(new Vector2(0, high));
+            }
         }
     }
 
@@ -96,8 +99,8 @@ public class PlayerScript : MonoBehaviour
 
     void BoostOnYAxis()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocityPerJump);
-        GetComponent<AudioSource>().PlayOneShot(FlyAudioClip);
+        rig.velocity = new Vector2(0, velocityPerJump);
+        audioSource.PlayOneShot(FlyAudioClip);
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -107,7 +110,7 @@ public class PlayerScript : MonoBehaviour
             if (col.gameObject.tag ==
                 "pannelBlank") //Pannelblank is an empty gameobject with a collider between the two pipes
             {
-                GetComponent<AudioSource>().PlayOneShot(ScoredAudioClip);
+                audioSource.PlayOneShot(ScoredAudioClip);
                 ScoreManagerScript.Score++;
             }
             else if (col.gameObject.tag == "Pannel")
@@ -132,7 +135,7 @@ public class PlayerScript : MonoBehaviour
     {
         onRestartEventChannel.RaiseEvent(true);
         GameStateManager.GameState = GameState.Dead;
-        GetComponent<AudioSource>().PlayOneShot(DeathAudioClip);
+        audioSource.PlayOneShot(DeathAudioClip);
         anim.SetBool("dead", true);
         Debug.Log("Player Dies");
     }
